@@ -16,3 +16,8 @@ def register(request):
         # Handle registration logic here
         pass
     return render(request, 'register.html')
+
+def doctors(request):
+    # Fetch doctors from the database and pass them to the
+    # template for rendering
+    return render(request, 'doctors.html')
