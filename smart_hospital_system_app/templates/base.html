@@ -9,23 +9,44 @@
     {% block extra_css %} {% endblock %}
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="{% url 'register' %}">Register</a></li>
-          <li><a href="{% url 'login' %}">Login</a></li>
-        </ul>
-      </nav>
+    <header class="header">
+      <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+          <h2>SmartCare</h2>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav" id="navMenu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Departments</a></li>
+            <li><a href="#">Doctors</a></li>
+            <li><a href="#">AI Assistant</a></li>
+
+            <!-- Dropdown -->
+            <li class="dropdown">
+              <a href="#">Account ▾</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <div class="menu-toggle" id="menuToggle">☰</div>
+      </div>
     </header>
 
-    {% block content %} {% endblock %} 
+    {% block content %} {% endblock %}
 
     <footer>
       <p>&copy; 2024 Smart Hospital System</p>
     </footer>
   </body>
   {% load static %}
-    <script src="{% static 'js/base.js' %}"></script>
+  <script src="{% static 'js/base.js' %}"></script>
   {% block extra_js %} {% endblock %}
 </html>
