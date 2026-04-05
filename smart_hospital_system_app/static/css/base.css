@@ -62,10 +62,12 @@
 }
 
 .dropdown-menu li {
+  display: none;
   padding: 10px;
 }
 
 .dropdown-menu li a {
+  display: none;
   color: black;
 }
 
@@ -74,7 +76,9 @@
 }
 
 /* Show dropdown on hover */
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu,
+.dropdown:hover .dropdown-menu li,
+.dropdown:hover .dropdown-menu li a {
   display: block;
 }
 
