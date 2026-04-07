@@ -16,3 +16,6 @@ def register(request):
         # Handle registration logic here
         pass
     return render(request, 'register.html')
+
+def ai(request):
+    return render(request, 'Ai.html')
